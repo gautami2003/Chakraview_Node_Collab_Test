@@ -1,0 +1,63 @@
+{
+  "versionName":"2.3.1",
+  "versionCode":2,
+  "testCacheVersionCode":23100,
+  "liveCacheVersionCode":23300,
+  "testAppVersionCode":23100,
+  "liveAppVersionCode":23300,
+  "isMandatoryUpdate":false,
+  "mandatoryUpdateTitle":"",
+  "mandatoryUpdateMessage":"",
+  "mandatoryUpdateActionText":"",
+  "mandatoryUpdateCancelText":"",
+  "mandatoryUpdateActionLink":"",
+
+  "timerDashboardLiveRoutes":10000,
+  "timerMapLiveRoute":4000,
+  "sessionmaxtimer": 2592000,
+
+  "chakraview_support_mail":"support@chakraview.co.in",
+  "chakraview_support_call":"+918356825741",
+  "chakraview_support_whatsappcall":"918356825741",
+
+  "checkFeesConfigurationLink":"https://parentapp.chakraview.co.in/schoolbustracker/db_services.php?DataOfFeesConfigurationForParentApp=",
+  "payFeesLink":"https://parentapp.chakraview.co.in/schoolbustracker/parentapp_fees.php?schoolcode=",
+
+  "subscriptionMode":"web",
+  "subscriptionActionLink":"https://parentapp.chakraview.co.in/schoolbustracker/payments/home.php",
+  "disablesubscriptionActionLink":"https://parentapp.chakraview.co.in/schoolbustracker/comingsoon/index.html",
+  "iconForApp":"",
+  "colorAccent":"",
+  "colorAccentDark":"",
+  "backgroundImage":"",
+  "backgroundImageTint":"",
+
+  "shouldShowNoActiveRouteMessage": true,
+  "noactiveroutemessage": "P2004 - Unable to locate school bus. Please contact support for feedback.",
+  "supportTelephoneUri": "tel:918356825741",
+  "supportSMSUri": "sms:918356825741",
+  "supportEmail": "support@chakraview.co.in",
+  "settingRate": "https://play.google.com/store/apps/details?id=com.chakraview.parent",
+  "settingFBLike": "https://www.facebook.com/permalink.php?story_fbid=1435485546747024&id=1435482080080704",
+  "settingFacebookLike": "https://www.facebook.com/profile.php?id=61555689248393&mibextid=ZbWKwL",
+  "settingInstagramLike": "https://www.instagram.com/chakraviewsolutions",
+  
+  "supportTNC": "https://chakraview.co.in/terms-and-conditions.html",
+  "supportPP": "https://chakraview.co.in/privacy_policy.html",
+  "supportDC": "https://parentapp.chakraview.co.in/schoolbustracker/disclaimer.html",
+  "supportFAQ": "file:///android_asset/faq.html",
+  
+  "admob_app_id":"ca-app-pub-6025940629608436~5096825496",
+  "admob_interstitial_id":"ca-app-pub-6025940629608436/2274639771",
+  "admob_native_id":"ca-app-pub-6025940629608436/5252420234",
+  "admob_native_id000":"ca-app-pub-3513653840999187/9898205353",
+  "admob_native_id001":"ca-app-pub-3513653840999187/8657082359",
+  "admob_native_id002":"ca-app-pub-3513653840999187/1357370357",
+  "admob_native_id003":"ca-app-pub-3513653840999187/8273938976",
+  "admob_app_id_ios":"ca-app-pub-6025940629608436~1285356695",
+  "admob_interstitial_id_ios":"ca-app-pub-6025940629608436/9001276751",
+  "admob_native_id_ios":"ca-app-pub-6025940629608436/5305326908",
+
+ "youtube_url_app":"https://youtube.com/shorts/gYDZdZHiPq0?feature=share"
+  
+}

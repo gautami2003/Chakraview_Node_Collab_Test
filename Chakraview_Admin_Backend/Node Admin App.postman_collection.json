@@ -1,0 +1,1103 @@
+{
+	"info": {
+		"_postman_id": "16fec807-38c0-4eb5-aca4-f346dfa9bb7b",
+		"name": "Node Admin App",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "38047505"
+	},
+	"item": [
+		{
+			"name": "Auth",
+			"item": [
+				{
+					"name": "Login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"userName\": \"parth\",\n    \"password\": \"123456\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{localhost}}/api/v1/auth/login",
+							"host": [
+								"{{localhost}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"auth",
+								"login"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Login",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"phoneNumber\":\"{{HardikNumber}}\",\n    \"IMEINumber\":\"ffffffff-8ff6-07dc-ffff-ffffef05ac4a\",\n    \"osType\":\"Android\",\n    \"osVersion\":\"14(34)\",\n    \"model\":\"SM-G990E\",\n    \"brand\":\"samsung\",\n    \"appVersion\":\"2.4.2\",\n    \"pushToken\":\"faDsHTdlSYWH0Qt45sPnDO:APA91bH7n8skiPdHOkOYPvbZekAGLqOiSHFYecbDe3v6yrDKYIt3Qo-RdigT3vkOgAvZDZfE-kpXsr5wFLtjm3GUzzzjbm8XL924vTGNwGIYp9Zsastmxhcz7H-olV6oDIDT-SGmZ-i_\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{localhost}}/api/v1/auth/login",
+									"host": [
+										"{{localhost}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"auth",
+										"login"
+									]
+								}
+							},
+							"_postman_previewlanguage": "Text",
+							"header": [],
+							"cookie": [],
+							"body": ""
+						}
+					]
+				},
+				{
+					"name": "Signup",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"busOperatorName\": \"test1812\",\r\n    \"countryID\": \"1\",\r\n    \"address1\": \"test1812\",\r\n    \"address2\": \"\",\r\n    \"cityID\": \"817\",\r\n    \"pincode\": \"382424\",\r\n    \"phoneNumber\": \"9638554676\",\r\n    \"ownerName\": \"test1812\",\r\n    \"ownerPhoneNumber\": \"9638554676\",\r\n    \"emailID\": \"test1812@gmail.com\",\r\n    \"websiteURL\": \"\",\r\n    \"businessType\": \"B2B\",\r\n    \"userName\": \"test1812\",\r\n    \"password\": \"123456\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{localhost}}/api/v1/auth/signup",
+							"host": [
+								"{{localhost}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"auth",
+								"signup"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Signup",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"busOperatorName\": \"test\",\r\n    \"countryID\": \"1\",\r\n    \"address1\": \"test\",\r\n    \"address2\": \"\",\r\n    \"cityID\": \"817\",\r\n    \"pincode\": \"382424\",\r\n    \"phoneNumber\": \"9638554676\",\r\n    \"ownerName\": \"testr\",\r\n    \"ownerPhoneNumber\": \"9638554676\",\r\n    \"emailID\": \"test123@gmail.com\",\r\n    \"websiteURL\": \"\",\r\n    \"businessType\": \"B2B\",\r\n    \"timeZone\": \"Asia/Kolkata\",\r\n    \"userName\": \"test123\",\r\n    \"password\": \"123456\",\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{localhost}}/api/v1/auth/signup",
+									"host": [
+										"{{localhost}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"auth",
+										"signup"
+									]
+								}
+							},
+							"_postman_previewlanguage": null,
+							"header": null,
+							"cookie": [],
+							"body": null
+						}
+					]
+				},
+				{
+					"name": "Logout",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{node admin token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "token",
+								"value": "{{token}}",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"url": {
+							"raw": "{{localhost}}/api/v1/auth/logout",
+							"host": [
+								"{{localhost}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"auth",
+								"logout"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Logout",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "token",
+										"value": "{{token}}",
+										"type": "text",
+										"disabled": true
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"phoneNumber\": 9712487143\n\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{localhost}}/api/v1/auth/logout",
+									"host": [
+										"{{localhost}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"auth",
+										"logout"
+									]
+								}
+							},
+							"_postman_previewlanguage": "Text",
+							"header": [],
+							"cookie": [],
+							"body": ""
+						}
+					]
+				},
+				{
+					"name": "Forgot Username Password",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"action\": \"username\",\r\n    // \"action\": \"password\",\r\n    \"emailID\":\"parthmaheta1812@gmail.com\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{localhost}}/api/v1/auth/forgot-username-password",
+							"host": [
+								"{{localhost}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"auth",
+								"forgot-username-password"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Forgot Username Password",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"action\": \"username\",\r\n    // \"action\": \"password\",\r\n    \"emailID\":\"parthmaheta1812@gmail.com\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{localhost}}/api/v1/auth/forgot-username-password",
+									"host": [
+										"{{localhost}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"auth",
+										"forgot-username-password"
+									]
+								}
+							},
+							"_postman_previewlanguage": null,
+							"header": null,
+							"cookie": [],
+							"body": null
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Bus Operator",
+			"item": [
+				{
+					"name": "Get All Bus",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{node admin token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{localhost}}/api/v1/busOperator/get-all?type=B2B",
+							"host": [
+								"{{localhost}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"busOperator",
+								"get-all"
+							],
+							"query": [
+								{
+									"key": "type",
+									"value": "B2B"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Get All Bus",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{localhost}}/api/v1/busOperator/get-allbus",
+									"host": [
+										"{{localhost}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"busOperator",
+										"get-allbus"
+									]
+								}
+							},
+							"_postman_previewlanguage": null,
+							"header": null,
+							"cookie": [],
+							"body": null
+						}
+					]
+				},
+				{
+					"name": "Get Bus Singal",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{node admin token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{localhost}}/api/v1/busOperator/51",
+							"host": [
+								"{{localhost}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"busOperator",
+								"51"
+							],
+							"query": [
+								{
+									"key": "",
+									"value": "",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Get Bus Singal",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{localhost}}/api/v1/busOperator/:id",
+									"host": [
+										"{{localhost}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"busOperator",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": ""
+										}
+									]
+								}
+							},
+							"_postman_previewlanguage": null,
+							"header": null,
+							"cookie": [],
+							"body": null
+						}
+					]
+				},
+				{
+					"name": "Edit Profile",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{node admin token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"busOperatorName\": \"test\",\r\n    \"countryID\": \"1\",\r\n    \"address1\": \"test\",\r\n    \"address2\": \"\",\r\n    \"cityID\": \"817\",\r\n    \"pincode\": \"382424\",\r\n    \"ownerPhoneNumber\": \"9638554676\",\r\n    \"ownerName\": \"testr\",\r\n    \"phoneNumber\": \"9638554676\",\r\n    \"emailID\": \"parthmaheta1812@gmail.com\",\r\n    \"websiteURL\": \"\",\r\n    \"tIMEZONE\": \"Asia/Kolkata\",\r\n    \"userName\": \"test123\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{localhost}}/api/v1/busOperator/edit-profile",
+							"host": [
+								"{{localhost}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"busOperator",
+								"edit-profile"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Edit Student",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"busOperatorID\": \"51\",\r\n    \"fatherName\": \"Govindbhai\",\r\n    \"motherName\": \"Vasantben \",\r\n    \"schoolID\": \"24\",\r\n    \"schoolSection\": \"Pre Primary\",\r\n    \"studentName\": \"Granth\",\r\n    \"studentNameHindi\": \"Granth\",\r\n    \"studentBloodGroup\": \"1\",\r\n    \"studentStandard\": \"1\",\r\n    \"studentClass\": \"ABCD\",\r\n    \"countryID\": \"1\",\r\n    \"address1\": \"Mamta House, Sv Road\",\r\n    \"address2\": \"Bandra West, Mumbai \",\r\n    \"cityID\": \"817\",\r\n    \"pincode\": \"400050\",\r\n    \"fatherMobileNumber\": \"7990618720\",\r\n    \"motherMobileNumber\": \"7990618720\",\r\n    \"otherMobileNumber\": \"9586467865\",\r\n    \"primaryMobileNumberOf\": \"Father\",\r\n    \"pickupMonday\": \"1\",\r\n    \"pickupTuesday\": \"1\",\r\n    \"pickupWednesday\": \"1\",\r\n    \"pickupThursday\": \"1\",\r\n    \"pickupFriday\": \"1\",\r\n    \"pickupSaturday\": \"1\",\r\n    \"pickupSunday\": \"1\",\r\n    \"dropMonday\": \"2\",\r\n    \"dropTuesday\": \"2\",\r\n    \"dropWednesday\": \"2\",\r\n    \"dropThursday\": \"2\",\r\n    \"dropFriday\": \"2\",\r\n    \"dropSaturday\": \"2\",\r\n    \"dropSunday\": \"2\",\r\n    \"stayBackToRouteID\": \"3\",\r\n    \"stayBackDropMonday\": \"3\",\r\n    \"stayBackDropTuesday\": \"3\",\r\n    \"stayBackDropWednesday\": \"3\",\r\n    \"stayBackDropThursday\": \"3\",\r\n    \"stayBackDropFriday\": \"3\",\r\n    \"stayBackDropSaturday\": \"3\",\r\n    \"stayBackDropSunday\": \"3\",\r\n    \"isAttendance\": \"1\",\r\n    \"emailID\": \"dharmesh@gmail.com\",\r\n    \"fromRouteID\": \"31\",\r\n    \"toRouteID\": \"1806\",\r\n    \"fromStoppageID\": \"805\",\r\n    \"toStoppageID\": \"804\",\r\n    \"studentID\": \"183399\",\r\n    \"updatedBy\": \"7990618720\",\r\n    \"updatedOn\": \"2023-02-21 02:18:31\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{liveapp}}/api/v1/parent/edit-student",
+									"host": [
+										"{{liveapp}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"parent",
+										"edit-student"
+									]
+								}
+							},
+							"_postman_previewlanguage": "Text",
+							"header": [],
+							"cookie": [],
+							"body": ""
+						}
+					]
+				},
+				{
+					"name": "Get Configurations",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{node admin token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{localhost}}/api/v1/busOperator/Configurations/271?type=B2C",
+							"host": [
+								"{{localhost}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"busOperator",
+								"Configurations",
+								"271"
+							],
+							"query": [
+								{
+									"key": "type",
+									"value": "B2C"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update Configurations",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{node admin token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"isEta\":\"Y\",\r\n    \"isWhatsApp\":\"Y\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{localhost}}/api/v1/busOperator/370",
+							"host": [
+								"{{localhost}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"busOperator",
+								"370"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Summary",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{node admin token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{localhost}}/api/v1/busOperator/get-summary",
+							"host": [
+								"{{localhost}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"busOperator",
+								"get-summary"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Get All Bus",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{localhost}}/api/v1/busOperator/get-allbus",
+									"host": [
+										"{{localhost}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"busOperator",
+										"get-allbus"
+									]
+								}
+							},
+							"_postman_previewlanguage": null,
+							"header": null,
+							"cookie": [],
+							"body": null
+						}
+					]
+				},
+				{
+					"name": "deleteAccount",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{node admin token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{localhost}}/api/v1/busOperator/377",
+							"host": [
+								"{{localhost}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"busOperator",
+								"377"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "MDM Simcards",
+			"item": [
+				{
+					"name": "Get MDM Simcards",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{node admin token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{localhost}}/api/v1/mdmSimcards/mdm-simcards",
+							"host": [
+								"{{localhost}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"mdmSimcards",
+								"mdm-simcards"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get MDM Simcards filter",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{node admin token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{localhost}}/api/v1/mdmSimcards/simcards-filter?simType=Allocated",
+							"host": [
+								"{{localhost}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"mdmSimcards",
+								"simcards-filter"
+							],
+							"query": [
+								{
+									"key": "simType",
+									"value": "Allocated"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create MDM Simcards",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{node admin token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"simSerialNumber\":\"\", \r\n    \"networkProvider\":\"\", \r\n    \"simType\":\"\", \r\n    \"rechargeType\":\"\", \r\n    \"phoneNumber\":\"9638554676\", \r\n    \"sIMNumber\":\"\", \r\n    \"sIMPurchaseDate\":\"\", \r\n    \"postpaidPlanName\":\"\", \r\n    \"postpaidPlanRental\":\"\", \r\n    \"prepaidPlanName\":\"\", \r\n    \"prepaidRechargeAmount\":\"\", \r\n    \"simStatus\":\"\", \r\n    \"custID\":\"\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{localhost}}/api/v1/mdmSimcards",
+							"host": [
+								"{{localhost}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"mdmSimcards"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update MDM Simcards",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{node admin token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"simSerialNumber\":\"\", \r\n    \"networkProvider\":\"\", \r\n    \"simType\":\"\", \r\n    \"rechargeType\":\"\", \r\n    \"phoneNumber\":\"123456789\", \r\n    \"sIMNumber\":\"\", \r\n    \"sIMPurchaseDate\":\"\", \r\n    \"postpaidPlanName\":\"\", \r\n    \"postpaidPlanRental\":\"\", \r\n    \"prepaidPlanName\":\"\", \r\n    \"prepaidRechargeAmount\":\"\", \r\n    \"simStatus\":\"\", \r\n    \"custID\":\"\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{localhost}}/api/v1/mdmSimcards/686",
+							"host": [
+								"{{localhost}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"mdmSimcards",
+								"686"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "deleteAccount",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{node admin token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{localhost}}/api/v1/mdmSimcards/683",
+							"host": [
+								"{{localhost}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"mdmSimcards",
+								"683"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "MDM Devices",
+			"item": [
+				{
+					"name": "Get MDM Devices",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{node admin token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{localhost}}/api/v1/mdmDevices/get-mdm-devices",
+							"host": [
+								"{{localhost}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"mdmDevices",
+								"get-mdm-devices"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create MDM Devices",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{node admin token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"deviceSerialNumber\":\"2222226\",\r\n    \"iMEI1\":\"2222226\",\r\n    \"iMEI2\":\"\",\r\n    \"dateOfPurchased\":\"\",\r\n    \"primaryModel\":\"\",\r\n    \"secondaryModel\":\"\",\r\n    \"androidVersion\":\"\",\r\n    \"vendor_1\":\"\",\r\n    \"vendor_2\":\"\",\r\n    \"price\":\"\",\r\n    \"modeOfPayment\":\"\",\r\n    \"paymentAccount\":\"\",\r\n    \"color\":\"\",\r\n    \"remarks_Repair\":\"\",\r\n    \"remarks_Lost\":\"\",\r\n    \"remarks_Battery_Change\":\"\",\r\n    \"remarks_Exchanged\":\"\",\r\n    \"remarks_Misc\":\"\",\r\n    \"device_Type\":\"\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{localhost}}/api/v1/mdmDevices",
+							"host": [
+								"{{localhost}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"mdmDevices"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update MDM Devices",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{node admin token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"deviceSerialNumber\":\"2222226\",\r\n    \"iMEI1\":\"2222226\",\r\n    \"iMEI2\":\"\",\r\n    \"dateOfPurchased\":\"\",\r\n    \"primaryModel\":\"\",\r\n    \"secondaryModel\":\"\",\r\n    \"androidVersion\":\"\",\r\n    \"vendor_1\":\"\",\r\n    \"vendor_2\":\"\",\r\n    \"price\":\"\",\r\n    \"modeOfPayment\":\"\",\r\n    \"paymentAccount\":\"\",\r\n    \"color\":\"\",\r\n    \"remarks_Repair\":\"\",\r\n    \"remarks_Lost\":\"\",\r\n    \"remarks_Battery_Change\":\"\",\r\n    \"remarks_Exchanged\":\"\",\r\n    \"remarks_Misc\":\"\",\r\n    \"device_Type\":\"\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{localhost}}/api/v1/mdmDevices/11139",
+							"host": [
+								"{{localhost}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"mdmDevices",
+								"11139"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "deleteAccount",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{node admin token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{localhost}}/api/v1/mdmDevices/10135",
+							"host": [
+								"{{localhost}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"mdmDevices",
+								"10135"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "MDM Allocation",
+			"item": [
+				{
+					"name": "Get MDM Allocation",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{node admin token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{localhost}}/api/v1/mdmallocation/get-mdm-allocation",
+							"host": [
+								"{{localhost}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"mdmallocation",
+								"get-mdm-allocation"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create MDM Allocatio",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{node admin token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"deviceSerialNumber\": \"222222\",\r\n    \"simSerialNumber\": \"9638554676\",\r\n    \"school\": \"CHAKRAVIEW\",\r\n    \"routeNumber\": \"PARTH\",\r\n    \"attendant\": \"R10\",\r\n    \"deviceSubmitDate\": \"2025-04-14\",\r\n    \"device_Submit_Person\": \"\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{localhost}}/api/v1/mdmAllocation",
+							"host": [
+								"{{localhost}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"mdmAllocation"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update MDM Allocatio",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{node admin token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"deviceSerialNumber\": \"222222\",\r\n    \"simSerialNumber\": \"9638554676\",\r\n    \"school\": \"CHAKRAVIEW\",\r\n    \"routeNumber\": \"PARTH\",\r\n    \"attendant\": \"R10\",\r\n    \"deviceSubmitDate\": \"2025-04-14\",\r\n    \"device_Submit_Person\": \"\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{localhost}}/api/v1/mdmAllocation",
+							"host": [
+								"{{localhost}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"mdmAllocation"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "deleteAccount",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{node admin token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{localhost}}/api/v1/mdmAllocation/6283",
+							"host": [
+								"{{localhost}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"mdmAllocation",
+								"6283"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

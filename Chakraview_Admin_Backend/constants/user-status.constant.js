@@ -1,0 +1,12 @@
+const USER_STATUS = {
+  IN_ACTIVE: 'IN_ACTIVE',
+  ACTIVE: 'ACTIVE',
+  DELETED: 'DELETED',
+  REG_PENDING: 'REG_PENDING',
+  INVITE_PENDING: 'INVITE_PENDING'
+};
+
+module.exports = {
+  USER_STATUS,
+  USER_STATUS_ARRAY: [...Object.values(USER_STATUS)],
+};
