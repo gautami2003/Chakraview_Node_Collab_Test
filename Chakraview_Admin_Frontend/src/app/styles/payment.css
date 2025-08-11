@@ -1,0 +1,48 @@
+.brand-logo {
+    width: 50px;
+}
+
+.section-card {
+    border: 1px solid #dee2e6;
+    border-radius: 0.5rem;
+    padding: 10px;
+    margin-bottom: 1rem;
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+.pay-now-btn {
+    background: linear-gradient(90deg, #ffca28, #fdd835);
+    border: none;
+    color: #000;
+    font-weight: bold;
+}
+
+.terms {
+    font-size: 0.9rem;
+}
+
+.success-icon {
+    /* width: 24px;
+    height: px; */
+    /* border: 3px solid #28a745; */
+    /* border-radius: 50%; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 80px auto 20px;
+}
+
+.success-icon svg {
+    width: 100px;
+    height: 100px;
+    color: #28a745;
+}
+
+.card-custom {
+    max-width: 450px;
+    margin: 0 auto;
+    border: none;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 12px;
+}
