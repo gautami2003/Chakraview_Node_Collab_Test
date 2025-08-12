@@ -1,6 +1,6 @@
 const sequelize_connection = require('../configs/db-connection.config');
 const { DataTypes } = require('sequelize');
-
+const SchoolMasterModel = require('./schoolMaster.model');
 const PortalMessageLogModel = sequelize_connection.define('portal_message_log', {
     PortalMessageLogID: {
         type: DataTypes.BIGINT,
@@ -23,6 +23,9 @@ const PortalMessageLogModel = sequelize_connection.define('portal_message_log', 
     DropRouteID: {
         type: DataTypes.INTEGER
     },
+    MobileNumbers: {
+        type: DataTypes.INTEGER
+    },
     StudentStandard: {
         type: DataTypes.STRING
     },
@@ -36,5 +39,9 @@ const PortalMessageLogModel = sequelize_connection.define('portal_message_log', 
     tableName: 'portal_message_log',
     timestamps: false
 });
-
+// Association to SchoolMasterModel
+PortalMessageLogModel.belongsTo(SchoolMasterModel, {
+  foreignKey: 'SchoolID',
+  as: 'school_master', 
+});
 module.exports = PortalMessageLogModel;

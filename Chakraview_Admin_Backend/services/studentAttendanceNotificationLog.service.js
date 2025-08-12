@@ -41,7 +41,7 @@ const getStudentAttendanceNotificationLogs = async (busOperatorId, filters = {})
     where,
     attributes: { exclude: [] },
     include: [
-      { model: SchoolMaster, attributes: ['SchoolName'] },
+      { model: SchoolMaster,as: 'school_master', attributes: ['SchoolName'] },
       { model: StudentMaster, attributes: ['StudentName'] },
       { model: PickupRouteMaster, as: 'pickup_route', attributes: ['RouteName'], required: false },
       { model: DropRouteMaster,   as: 'drop_route',   attributes: ['RouteName'], required: false },

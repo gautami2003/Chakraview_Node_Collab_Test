@@ -1,5 +1,7 @@
 const sequelize_connection = require('../configs/db-connection.config');
 const { DataTypes } = require('sequelize');
+const SchoolMasterModel = require('./schoolMaster.model');
+const StudentMasterModel = require('./studentMaster.model');
 
 const PaymentSubscriptionHistory = sequelize_connection.define('payment_subscription_history', {
     Subno: {
@@ -60,5 +62,13 @@ const PaymentSubscriptionHistory = sequelize_connection.define('payment_subscrip
     tableName: 'payment_subscription_history',
     timestamps: false
 });
-
+// Association to SchoolMasterModel
+PaymentSubscriptionHistory.belongsTo(SchoolMasterModel, {
+  foreignKey: 'SchoolID', 
+  as: 'school_master',   
+});
+PaymentSubscriptionHistory.belongsTo(StudentMasterModel, {
+  foreignKey: 'StudentID',
+  as: 'student_master',    
+});
 module.exports = PaymentSubscriptionHistory;

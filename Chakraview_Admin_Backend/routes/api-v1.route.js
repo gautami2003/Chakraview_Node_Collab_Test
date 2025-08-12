@@ -27,9 +27,12 @@ router.use('/fees-master-zonewise', require('./api/feesMasterZonewise.route'));
 router.use('/fees-collection-zoneWise', require('./api/feesCollectionZoneWise.route'));
 router.use('/fees-master-studentwise', require('./api/feesMasterStudentwise.route'));
 router.use('/payments-collection', require('./api/paymentsCollection.route'));
+router.use('/paymentSub', require('./api/paymentSub.route'));
 router.use('/school-holidays', require('./api/schoolHoliday.route'));
 router.use('/fees-collection', require('./api/feesCollection.route'));
 router.use('/studentAttendanceNotificationLog', require('./api/studentAttendanceNotificationLog.route'));
+router.use('/notificationLog', require('./api/NotificationLog.route'));
+router.use('/portalLog', require('./api/PortalLog.route'));
 router.use('/distanceMessageReport', require('./api/distanceMessageReport.route'));
 
 
