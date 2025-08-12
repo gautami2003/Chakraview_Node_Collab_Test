@@ -29,7 +29,8 @@ router.use('/fees-master-studentwise', require('./api/feesMasterStudentwise.rout
 router.use('/payments-collection', require('./api/paymentsCollection.route'));
 router.use('/school-holidays', require('./api/schoolHoliday.route'));
 router.use('/fees-collection', require('./api/feesCollection.route'));
-
+router.use('/studentAttendanceNotificationLog', require('./api/studentAttendanceNotificationLog.route'));
+router.use('/distanceMessageReport', require('./api/distanceMessageReport.route'));
 
 
 

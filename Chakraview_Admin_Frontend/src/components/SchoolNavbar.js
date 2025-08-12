@@ -117,17 +117,17 @@ function SchoolNavbar() {
                             <li> <hr className="dropdown-divider" /></li>
                             <li className="dropdown-submenu ms-3" ><Link className="nav-link dropdown-toggle" href="#">Attendance Log</Link>
                                 <ul className="dropdown-menu dropdown-menu-start">
-                                    <li className="dropdown-item"><Link className="nav-link" href="/reports/attendant-log">Attendance Detailed</Link></li>
+                                    <li className="dropdown-item"><Link className="nav-link" href="/reports/attendance-log">Attendance Detailed</Link></li>
                                     <li> <hr className="dropdown-divider" /></li>
-                                    <li className="dropdown-item"><Link className="nav-link" href="/reports/attendant-log-summary">Attendance Summary</Link></li>
+                                    <li className="dropdown-item"><Link className="nav-link" href="/reports/attendance-log-summary">Attendance Summary</Link></li>
                                 </ul>
                             </li>
                             <li> <hr className="dropdown-divider" /></li>
                             <li className="dropdown-submenu ms-3" ><Link className="nav-link dropdown-toggle" href="#">Messsage Log</Link>
                                 <ul className="dropdown-menu dropdown-menu-start">
-                                    <li className="dropdown-item"><Link className="nav-link" href="#">Bus Message</Link></li>
+                                    <li className="dropdown-item"><Link className="nav-link" href="/reports/distance-message-log">Distance Message</Link></li>
                                     <li> <hr className="dropdown-divider" /></li>
-                                    <li className="dropdown-item"><Link className="nav-link" href="#">Student Attendance Message</Link></li>
+                                    <li className="dropdown-item"><Link className="nav-link" href="/reports/student-attendance-notification">Student Attendance Message</Link></li>
                                     <li> <hr className="dropdown-divider" /></li>
                                     <li className="dropdown-item"><Link className="nav-link" href="#">Manual Messages</Link></li>
                                     <li> <hr className="dropdown-divider" /></li>

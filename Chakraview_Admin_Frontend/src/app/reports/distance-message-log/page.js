@@ -1,14 +1,14 @@
 import React, { Suspense } from 'react';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
-import AttendanceLogContent from './AttendanceLogContent';
+import DistanceMessageContent from './DistanceMessageContent';
 
-export default function AttendanceLogPage() {
+export default function DistanceMessage() {
   return (
     <>
       <Navbar />
       <Suspense fallback={<div>Loading...</div>}>
-        <AttendanceLogContent />
+        <DistanceMessageContent />
       </Suspense>
       <Footer />
     </>
