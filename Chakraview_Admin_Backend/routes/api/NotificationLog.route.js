@@ -2,7 +2,7 @@ const express = require("express");
 const router = express.Router();
 
 // Controller methods.
-const { getAllStudentAttendanceNotificationLogs } = require("../../controllers/NotificationLog.controller");
+const { getAllNotificationReport } = require("../../controllers/notificationLog.controller");
 
 // Middlewares.
 const requestValidatorMiddleware = require("../../middlewares/request-validator.middleware");
@@ -12,7 +12,7 @@ const jwtValidatorMiddleware = require("../../middlewares/jwt-validator.middlewa
 router.get(
   "/",
   [jwtValidatorMiddleware, requestValidatorMiddleware([], [])],
-  getAllStudentAttendanceNotificationLogs
+  getAllNotificationReport
 );
 
 module.exports = router;

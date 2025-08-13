@@ -10,7 +10,7 @@ const { logError } = require("../utils/logger");
 const fmtDT = (v) =>
   v && moment(v).isValid() ? moment(v).format("DD-MM-YYYY HH:mm:ss") : "";
 
-const getAllStudentAttendanceNotificationLogs = async (req, res) => {
+const getAllNotificationReport = async (req, res) => {
   try {
     const busOperatorId =
       req.user?.busOperatorID ?? req.user?.BusOperatorID ?? null;
@@ -38,44 +38,39 @@ const getAllStudentAttendanceNotificationLogs = async (req, res) => {
       );
     }
 
-    const result = rows.map((r) => {
-      const routeType = r.RouteType ?? "";
-      // Resolve Route by type
-      const routeName =
-        (routeType === "Pickup"
-          ? r.pickup_route?.RouteName
-          : routeType === "Drop"
-          ? r.drop_route?.RouteName
-          : r.RouteName) || "";
+   const result = rows.map((r) => {
+  const routeType = r.Type ?? "";
 
-      return {
-        Student:
-          r.student_master?.StudentName ??
-          r.StudentMaster?.StudentName ??
-          "",
-        "Bus Attendant":
-          r.bus_incharge_master?.DriverName ??
-          r.DriverName ??
-          "",
-        School:
-          r.school_master?.SchoolName ??
-          r.SchoolMaster?.SchoolName ??
-          "",
-        Route: routeName,
-        RouteType: r.RouteType,
-        MessageType: r.MessageType,
-        MessageURL: r.MessageURL ?? "",
-        DateTime: fmtDT(r.DateTime),
-      };
-    });
+  const routeName =
+    (routeType === "Pickup"
+      ? r.pickup_route?.RouteName
+      : routeType === "Drop"
+      ? r.drop_route?.RouteName
+      : r.RouteName) || "";
+
+  return {
+    "Bus Attendant":
+      r.driver_route_transaction?.bus_incharge_master?.DriverName ?? "",
+    School:
+      r.school_master?.SchoolName ?? "",
+    RouteName: routeName,
+    RouteType: r.Type,
+    MobileNumbers: r.MobileNumbers,
+    MessageTitle: r.MessageTitle,
+    MessageType: r.MessageType,
+    MessageURL: r.MessageURL ?? "",
+    DateTime: fmtDT(r.DateTime),
+  };
+});
+
 
     return apiHelper.success(res, COMMON_MESSAGES.DATA_RETRIEVED, result);
   } catch (error) {
     await logError(
       req,
       res,
-      "studentAttendanceNotificationLog",
-      "getAllStudentAttendanceNotificationLogs",
+      "getAllNotificationReport",
+      "getAllNotificationReport",
       error,
       {}
     );
@@ -87,4 +82,4 @@ const getAllStudentAttendanceNotificationLogs = async (req, res) => {
   }
 };
 
-module.exports = { getAllStudentAttendanceNotificationLogs };
+module.exports = { getAllNotificationReport };

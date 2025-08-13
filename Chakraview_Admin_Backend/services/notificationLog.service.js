@@ -27,6 +27,17 @@ const getAllNotificationReport = async (busOperatorId) => {
       },
       { model: PICKUP_ROUTE_MASTER, as: "pickup_route", attributes: ["RouteName"] },
       { model: DROP_ROUTE_MASTER, as: "drop_route", attributes: ["RouteName"] },
+       {
+      model: DRIVER_ROUTE_TRANSACTION,
+      as: "driver_route_transaction",
+      include: [
+        {
+          model: BUS_INCHARGE_MASTER,
+          as: "bus_incharge_master",
+          attributes: ["DriverID", "DriverName"]
+        }
+      ]
+    },
     ],
     order: [["DateTime", "DESC"]],
   });

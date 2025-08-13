@@ -129,9 +129,8 @@ function SchoolNavbar() {
                                     <li> <hr className="dropdown-divider" /></li>
                                     <li className="dropdown-item"><Link className="nav-link" href="/reports/student-attendance-notification">Student Attendance Message</Link></li>
                                     <li> <hr className="dropdown-divider" /></li>
-                                    <li className="dropdown-item"><Link className="nav-link" href="#">Manual Messages</Link></li>
+                                    <li className="dropdown-item"><Link className="nav-link" href="/reports/notification-log">Manual Messages</Link></li>
                                     <li> <hr className="dropdown-divider" /></li>
-                                    <li className="dropdown-item"><Link className="nav-link" href="#">B2C Fees Report</Link></li>
                                 </ul>
                             </li>
                             <li> <hr className="dropdown-divider" /></li>
@@ -143,9 +142,9 @@ function SchoolNavbar() {
                                     <li> <hr className="dropdown-divider" /></li>
                                     <li className="dropdown-item"><Link className="nav-link" href="#">LongCode Log</Link></li>
                                     <li> <hr className="dropdown-divider" /></li>
-                                    <li className="dropdown-item"><Link className="nav-link" href="#">Variation Report</Link></li>
+                                    <li className="dropdown-item"><Link className="nav-link" href="variation-report">Variation Report</Link></li>
                                     <li> <hr className="dropdown-divider" /></li>
-                                    <li className="dropdown-item"><Link className="nav-link" href="#">B2C Premium Fees Report</Link></li>
+                                    <li className="dropdown-item"><Link className="nav-link" href="payment-sub">B2C Premium Fees Report</Link></li>
                                 </ul>
                             </li>
                         </ul>

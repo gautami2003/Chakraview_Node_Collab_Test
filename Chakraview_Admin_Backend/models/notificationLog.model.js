@@ -1,6 +1,5 @@
 const sequelize_connection = require('../configs/db-connection.config');
 const { DataTypes } = require('sequelize');
-const StudentMasterModel = require('./studentMaster.model');
 const SchoolMasterModel = require('./schoolMaster.model');
 const PickupRouteModel = require('./pickupRouteMaster.model');
 const DropRouteMasterModel = require('./dropRouteMaster.model');
@@ -26,9 +25,6 @@ const NotificationLogModel = sequelize_connection.define('notification_log', {
     RouteID: {
         type: DataTypes.INTEGER
     },
-    StudentID: {
-        type: DataTypes.INTEGER
-    },
     Type: {
         type: DataTypes.STRING
     },
@@ -39,6 +35,9 @@ const NotificationLogModel = sequelize_connection.define('notification_log', {
         type: DataTypes.STRING
     },
     MessageType: {
+        type: DataTypes.STRING
+    },
+    MessageTitle:{
         type: DataTypes.STRING
     },
     DateTime: {
@@ -55,10 +54,6 @@ NotificationLogModel.belongsTo(SchoolMasterModel, {
   as: 'school_master',
 });
 
-NotificationLogModel.belongsTo(StudentMasterModel, {
-  foreignKey: 'StudentID',
-  as: 'student_master',
-});
 
 NotificationLogModel.belongsTo(PickupRouteModel, {
   foreignKey: 'RouteID',
@@ -74,14 +69,8 @@ NotificationLogModel.belongsTo(DropRouteMasterModel, {
 
 NotificationLogModel.belongsTo(DriverRouteTransactionModel, {
   foreignKey: 'DriverRouteTransactionID',
-  targetKey: 'DriverRouteTransactionID',
   as: 'driver_route_transaction'
 });
 
-NotificationLogModel.belongsTo(BusInchargeMasterModel, {
-  foreignKey: 'DriverID',
-  targetKey: 'DriverID',
-  as: 'bus_incharge_master'
-});
 
 module.exports = NotificationLogModel;

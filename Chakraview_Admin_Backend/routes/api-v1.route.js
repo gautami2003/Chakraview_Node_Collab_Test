@@ -31,8 +31,9 @@ router.use('/paymentSub', require('./api/paymentSub.route'));
 router.use('/school-holidays', require('./api/schoolHoliday.route'));
 router.use('/fees-collection', require('./api/feesCollection.route'));
 router.use('/studentAttendanceNotificationLog', require('./api/studentAttendanceNotificationLog.route'));
-router.use('/notificationLog', require('./api/NotificationLog.route'));
+router.use('/notificationLog', require('./api/notificationLog.route'));
 router.use('/portalLog', require('./api/PortalLog.route'));
+router.use('/variationReport', require('./api/variationReport.route'));
 router.use('/distanceMessageReport', require('./api/distanceMessageReport.route'));
 
 
